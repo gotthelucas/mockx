@@ -37,8 +37,8 @@ app.post('/soap', function(req, res){
 
 
 
-app.listen(3002, function () 
+app.listen(process.env.PORT, function () 
 {
-	console.log('MULESOFT Mock Server in 3002');
+	console.log('MULESOFT Mock Server in '+process.env.PORT);
 });
 
