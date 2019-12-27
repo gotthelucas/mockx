@@ -4,7 +4,7 @@
   "description": "Mocked JSON responses for Mulesoft integration",
   "main": "index.js",
   "scripts": {
-    "test": "npm run index.js"
+    "start": "npm run index.js"
   },
   "author": "Lucas Sasiain",
   "license": "ISC",
