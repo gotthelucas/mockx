@@ -16,20 +16,20 @@ app.post('/json', function (req, res)
 	res.send(JSON.stringify({ valueis: "123456789" }));
 });
 
-app.get('/dfcustomer', function(req, res){
+app.get('/a3_customer', function(req, res){
 	res.send(DF_ZCP_CUS);
 });
 
-app.get('/dfcustomeraddress', function(req, res){
+app.get('/a3_customer_address', function(req, res){
 	res.send(DF_ZCP_CUS_ADRC);
 });
 
-app.post('/soap', function(req, res){
+app.post('/a3_soap', function(req, res){
 
-	if(req.body.root.payload[0].cust_id[0] == '1159038')
+	/* if(req.body.root.payload[0].cust_id[0] == '1159038')
 	{
 		return res.status(501).send('Error customer is not valid.');
-	}
+	} */
 	res.setHeader('Content-Type', 'text/xml');
 	res.send(SOAPR);
 });
