@@ -61,11 +61,15 @@ app.get('/a1_xml_subperiods', function(req, res){
 });
 
 app.get('/a3_customer/:runid', function(req, res){
-	if(req.params.runid >= 1456 || req.params.runid <= 1485)
+		
+	if(parseInt(req.params.runid) > 1455 && parseInt(req.params.runid) < 1486)
+	{
+		return res.send(DF_ZCP_CUS);
+	}else
 	{
 		return res.status(501).send('Error RUNID not found.');
 	}
-	res.send(DF_ZCP_CUS);
+	
 });
 
 app.get('/a3_customer_address', function(req, res){
