@@ -62,12 +62,12 @@ app.get('/a1_xml_subperiods', function(req, res){
 
 app.get('/a3_customer/:runid', function(req, res){
 		
-	if(parseInt(req.params.runid) > 1455 && parseInt(req.params.runid) < 1486)
+	if(parseInt(req.params.runid) > 1455 && parseInt(req.params.runid) < 5000)
 	{
 		return res.send(DF_ZCP_CUS);
 	}else
 	{
-		return res.status(501).send('Error RUNID not found.');
+		return res.status(501).send('Error RUNID not found. Use between 1456 and 5000');
 	}
 	
 });
