@@ -86,6 +86,16 @@ app.post('/a3_soap', function(req, res){
 	res.send(SOAPR);
 });
 
+app.post('/a3_soap_error', function(req, res){
+
+	if(req.body.root.payload[0].cust_id[0] == '1159038')
+	{
+		return res.status(501).send('Error customer is not valid.');
+	}
+	res.setHeader('Content-Type', 'text/xml');
+	res.send(SOAPR);
+});
+
 
 
 
