@@ -44,6 +44,11 @@ app.post('/soap', function(req, res){
 	res.send(SOAPR);
 });
 
+app.post('/a1_soap', function(req, res){
+	res.setHeader('Content-Type', 'text/xml');
+	res.send(SOAPR);
+})
+
 app.get('/a1_periods', function(req, res){
 	res.send(a1periods);
 });
@@ -91,7 +96,7 @@ app.post('/a3_soap', function(req, res){
 
 app.post('/a3_soap_error', function(req, res){
 
-	if(req.body.root.payload[0].cust_id[0] == '0001159038')
+	if(req.body.root.payload[0].cust_id[0] == '0001159038' || req.body.root.payload[0].cust_id[0] == '1159038')
 	{		
 		//res.setHeader('Content-Type', 'text/xml');
 		//res.send(SOAPXMLERRORA3);
